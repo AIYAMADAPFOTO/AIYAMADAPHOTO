@@ -5,41 +5,51 @@
   <title>匿名お題BOX</title>
   <style>
     body {
-    font-family: sans-serif;
-    background-image: url("BackPhoto.png");
-    background-size: cover;         
-    background-position: center;    
-    background-repeat: no-repeat;    
-    background-attachment: fixed;    
-    padding: 2em;
-    text-align: center;
-    color: white;                   
-  }
+      font-family: sans-serif;
+      background-image: url("BackPhoto.png");
+      background-size: cover;         
+      background-position: center;    
+      background-repeat: no-repeat;   
+      background-attachment: fixed;    
+      padding: 2em;
+      text-align: center;
+      color: white;
+    }
 
-  input, textarea {
-    width: 90%;
-    max-width: 600px;
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 1em;
-  }
+    .title-box {
+      background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+      padding: 1em;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
 
-  textarea {
-    height: 200px;
-  }
+    input, textarea {
+      width: 90%;
+      max-width: 600px;
+      font-size: 16px;
+      padding: 10px;
+      margin-bottom: 1em;
+    }
 
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <h1>ウォレルAIパロディ画像ネタ募集Bot<br>
-  <small>(ウォレル以外のキャラや、コラボも可)</small>
-  </h1>
+  <div class="title-box">
+    <h1>ウォレルAIパロディ画像ネタ募集Bot<br>
+      <small>(ウォレル以外のキャラや、コラボも可)</small>
+    </h1>
+  </div>
   <p>※X連携や個人情報の入力は不要です。</p>
 
   <form action="https://formsubmit.co/el/tinaza" method="POST">
