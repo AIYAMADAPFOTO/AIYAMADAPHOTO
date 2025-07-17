@@ -5,34 +5,49 @@
   <title>匿名お題BOX</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f5f5f5;
-      padding: 2em;
-      text-align: center;
-    }
-    textarea {
-      width: 90%;
-      max-width: 600px;
-      height: 200px;
-      font-size: 16px;
-      padding: 10px;
-      margin-bottom: 1em;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+    font-family: sans-serif;
+    background-image: url("BackPhoto.png");
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-attachment: fixed;    
+    padding: 2em;
+    text-align: center;
+    color: white;                   
+  }
+
+  input, textarea {
+    width: 90%;
+    max-width: 600px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 1em;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
 
-  <h1>📝 AIお題を送ってください</h1>
+  <h1>ウォレルAIパロディ画像ネタ募集Bot<br>
+  <small>(ウォレル以外のキャラや、コラボも可)</small>
+  </h1>
   <p>※X連携や個人情報の入力は不要です。</p>
 
   <form action="https://formsubmit.co/el/tinaza" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="🔔 新しいAIお題が届きました！">
+
+    <input type="text" name="nickname" placeholder="あなたの素敵なニックネームを教えて">
+    <br>
     <textarea name="message" placeholder="ここにお題を入力..." required></textarea>
     <br>
     <button type="submit">お題を送信する</button>
