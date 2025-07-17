@@ -4,24 +4,34 @@
   <meta charset="UTF-8">
   <title>匿名お題BOX</title>
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: sans-serif;
       background-image: url("BackPhoto.png");
-      background-size: cover;         
-      background-position: center;    
-      background-repeat: no-repeat;   
-      background-attachment: fixed;    
-      padding: 2em;
-      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: white;
     }
 
-    .title-box {
-      background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
-      padding: 1em;
-      border-radius: 10px;
-      display: inline-block;
-      margin-bottom: 1em;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4); /* 薄い黒の背景で文字を読みやすく */
+      padding: 2em;
+    }
+
+    h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
     }
 
     input, textarea {
@@ -30,6 +40,8 @@
       font-size: 16px;
       padding: 10px;
       margin-bottom: 1em;
+      border: none;
+      border-radius: 6px;
     }
 
     textarea {
@@ -40,28 +52,34 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
 
-  <div class="title-box">
-    <h1>ウォレルAIパロディ画像ネタ募集Bot<br>
+  <div class="container">
+    <h1>
+      ウォレルAIパロディ画像ネタ募集Bot<br>
       <small>(ウォレル以外のキャラや、コラボも可)</small>
     </h1>
+    <p>※X連携や個人情報の入力は不要です。</p>
+
+    <form action="https://formsubmit.co/el/tinaza" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="🔔 新しいAIお題が届きました！">
+      <input type="hidden" name="_next" value="https://aiyamadapfoto.github.io/AIYAMADAPHOTO/thankyou.html">
+
+      <input type="text" name="nickname" placeholder="あなたの素敵なニックネームを教えて♥">
+      <br>
+      <textarea name="message" placeholder="ここにお題を入力..." required></textarea>
+      <br>
+      <button type="submit">お題を送信する</button>
+    </form>
   </div>
-  <p>※X連携や個人情報の入力は不要です。</p>
-
- <form action="https://formsubmit.co/el/tinaza" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="🔔 新しいAIお題が届きました！">
-
-    <input type="text" name="nickname" placeholder="あなたの素敵なニックネームを教えて♥<">
-    <br>
-    <textarea name="message" placeholder="ここにお題を入力..." required></textarea>
-    <br>
-    <button type="submit">お題を送信する</button>
-  </form>
 
 </body>
 </html>
